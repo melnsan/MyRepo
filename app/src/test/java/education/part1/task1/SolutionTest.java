@@ -6,17 +6,16 @@ class SolutionTest {
 
     @org.junit.jupiter.api.Test
     void testIsYearLeap() {
-        int[] expectedYears = {2000};
-        //boolean [] isExpectedYearsLeap = {false, false, false, true};
-        for (int expectedYear : expectedYears) {
+        int[] expectedYears = {-392, 144, 2012, 2000, 1460};
+        for(int expectedYear : expectedYears) {
             assertTrue(Solution.isYearLeap(expectedYear));
         }
     }
     @org.junit.jupiter.api.Test
     void testIsYearNotLeap() {
-        int[] expectedYears = {9, 150, 600};
-        for(int i=0; i < expectedYears.length; i++){
-            assertFalse(Solution.isYearLeap(expectedYears[i]));
+        int[] expectedYears = {-9, 150, 600, 1800, 1446};
+        for(int expectedYear : expectedYears) {
+            assertFalse(Solution.isYearLeap(expectedYear));
         }
     }
 }

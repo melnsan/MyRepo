@@ -6,25 +6,26 @@ import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        System.out.println("Введите год: ");
+        System.out.println("You are going to determine if year is leap?");
+        System.out.println("Please enter year:");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int year = Integer.parseInt(reader.readLine());
-        isYearLeap(year);
-
+        int y = Integer.parseInt(reader.readLine());
+        boolean year = isYearLeap(y);
+        if(year){
+            System.out.println(y + " is leap year!");
+        }else {
+            System.out.println(y + " is not leap year ");
+        }
     }
 
     public static boolean isYearLeap(int a){
         if(( a % 4 ) != 0){
-           // System.out.println(a + " - это обычный год");
             return false;
         }else if((( a % 4 ) == 0 ) & (( a % 100 ) != 0 )){
-            //System.out.println(a + " - это высокосный год!");
             return true;
         }else if((( a % 4 ) == 0 ) & (( a % 400 ) == 0 )){
-            //System.out.println(a + " - это высокосный год!");
             return true;
         }else{
-            //System.out.println(a + " - это обычный год :(");
             return false;
         }
     }

@@ -26,10 +26,18 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'Part_1.App'
+    mainClass = 'education.part1.task1.Solution'
 }
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'education.part1.task1.Solution'
+        )
+    }
 }
