@@ -10,7 +10,8 @@ public class Solution {
         System.out.println("Please enter year:");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int y = Integer.parseInt(reader.readLine());
-        boolean year = isYearLeap(y);
+        Solution object = new Solution();
+        boolean year = object.isYearLeap(y);
         if(year){
             System.out.println(y + " is leap year!");
         }else {
@@ -18,7 +19,7 @@ public class Solution {
         }
     }
 
-    public static boolean isYearLeap(int a){
+    public boolean isYearLeap(int a){
         if(( a % 4 ) != 0){
             return false;
         }else if((( a % 4 ) == 0 ) & (( a % 100 ) != 0 )){
