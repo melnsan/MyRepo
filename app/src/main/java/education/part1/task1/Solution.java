@@ -20,14 +20,16 @@ public class Solution {
     }
 
     public boolean isYearLeap(int a){
-        if(( a % 4 ) != 0){
-            return false;
-        }else if((( a % 4 ) == 0 ) & (( a % 100 ) != 0 )){
-            return true;
-        }else if((( a % 4 ) == 0 ) & (( a % 400 ) == 0 )){
-            return true;
+        boolean x;
+       if(( a % 4 ) != 0){
+           x = false;
+        }else if(a % 100 != 0){
+           x =  true;
+        }else if(a % 400 == 0){
+           x =  true;
         }else{
-            return false;
+           x =  false;
         }
+       return x;
     }
 }
