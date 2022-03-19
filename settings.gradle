@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'Part_1'
-include('app')
+include('task_1', 'task_2')
